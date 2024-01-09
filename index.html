@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <script src="stoppuhr.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>Stoppuhr-PWA</title>
+</head>
+
+    <body>
+        <div class="wrapper">
+            <h1>Stoppuhr</h1>
+            <div class="settimer">
+                <label for="stunden">Stunden:</label>
+                <input type="number" class="inp-item" id="stunden" value="0" min="0" max="23">
+                <label for="minuten">Minuten:</label>
+                <input type="number" class="inp-item" id="minuten" value="0" min="0" max="59">
+                <label for="sekunden">Sekunden:</label>
+                <input type="number"  class="inp-item" id="sekunden" value="0" min="0" max="59">
+            </div>   
+            <div class="btn-wrapper">
+                    <button class="btn" onclick="startTimer()">Starten</button>
+                    <button class="btn" onclick="stopTimer()">Löschen</button>
+                </div>
+              
+            <div class="bildschirm" id="zeitangabe"> </div>
+  
+        </div>
+        <script>
+            // den Service Worker registrieren
+            if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(function(registration) {
+            // die Registrierung ist gelungen
+            console.log('Der Service Worker wurde registriert.');
+            })
+            .catch(function(error) {
+            // die Registrierung ist nicht gelungen
+            console.log('Der Service Worker konnte nicht registriert werden.', error);
+            });
+            }
+            </script>
+    </body>
+        
+</html>

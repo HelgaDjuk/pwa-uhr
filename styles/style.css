@@ -1,0 +1,111 @@
+body {
+    overflow: hidden;
+    font-size: 200%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:100%;
+    background-color: rgb(203, 216, 212);
+}
+h1 {
+    font-size: 250%;  
+    text-align: center;
+}
+.wrapper{
+    width: 60%; 
+    margin: 0 auto;
+    font-size: 100%;
+     background-color: rgb(99, 102, 104);
+     color: white;
+     padding: 1% 5% 5% 5%;
+    
+}
+.settimer{
+    display: flex;
+}
+.inp-item{
+    flex: 1;
+   margin-right: 3%;
+   font-size: 75%;
+}
+.inp-item:last-child{
+    margin-right: 0%;
+}
+.settimer label{
+    margin-right: 1%;
+}
+.btn-wrapper{
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.btn{
+ flex:1;
+ margin-right: 3%;
+ padding: 1%;
+ font-size: 75%;
+ background-color: rgb(168, 206, 206);
+ border: none;
+}
+.btn:last-child{
+    margin-right: 0%;
+    background-color: rgb(222, 218, 215);
+}
+.btn:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+}
+.settimer input{
+    font-size: 75%;
+}
+.bildschirm{
+   background-color: rgb(5, 78, 78);
+   text-align: center;
+   font-size: 300%;
+}
+@media screen and (max-width: 1200px) {
+    body{
+        font-size: 200%;
+    }
+    .wrapper{
+        width: 90%;
+    }
+    
+}
+    
+@media screen and (max-width: 850px) {
+    .wrapper {
+        width: 90%;
+        font-size: 250%;
+    }
+    .inp-item{
+        margin-right: 0%;
+    }
+    .settimer{
+        flex-direction: column;
+    }
+    
+    h1{
+        font-size: 130%;
+        margin-bottom: 0%;
+    }
+    .bildschirm{
+        font-size: 150%;
+    }
+}
+@media screen and (max-width: 500px) {
+.wrapper {
+ font-size: 200%;
+}
+}
+@media screen and (max-width: 400px){
+    .wrapper{
+        font-size: 180%;
+    }
+    h1{
+        font-size: 110%;
+        margin-bottom: 0%;
+    }
+    .bildschirm{
+        font-size: 130%;
+    }
+}

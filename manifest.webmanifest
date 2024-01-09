@@ -1,0 +1,22 @@
+{
+"name": "Stoppuhr-PWA",
+"short_name": "Stoppuhr",
+"description": "Eine einfache Stoppuhr-App",
+"start_url": "/",
+"scope": "/",
+"display": "standalone",
+"background_color": "#ffffff",
+"theme_color": "#ffffff",
+"icons": [
+{"src": "logos/clock-klein.png",
+"sizes": "192x192",
+"type": "image/png"
+},
+{
+"src": "logos/clock-gross.png",
+"sizes": "512x512",
+"type": "image/png",
+"purpose": "maskable"
+}
+]
+}
